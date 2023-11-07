@@ -1,0 +1,9 @@
+{
+    "all": true,
+    "exclude": ["src/.internal", "test", "coverage"],
+    "output": "reports",
+    "reporter" : [
+        "text",
+        "lcov"
+    ]
+}
