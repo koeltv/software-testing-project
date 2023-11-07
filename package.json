@@ -5,12 +5,14 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "test-with-coverage": "nyc --reporter=lcov mocha"
   },
   "author": "",
   "license": "MIT",
   "devDependencies": {
     "chai": "^4.3.10",
-    "mocha": "^10.2.0"
+    "mocha": "^10.2.0",
+    "nyc": "^15.1.0"
   }
 }
