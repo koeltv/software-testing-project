@@ -6,3 +6,7 @@ This is the GitHub repository for a project on software testing from the [COMP.S
 at [Tampere University](https://www.tuni.fi/en).
 
 This repository contains the source code under testing and unit tests.
+
+## References
+- [Coveralls page](https://coveralls.io/github/koeltv/software-testing-project)
+- [template GitHub repository](https://github.com/otula/COMP.SE.200-2023-2024-1)
