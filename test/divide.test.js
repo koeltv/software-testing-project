@@ -7,7 +7,7 @@ describe('divide ', () => {
     it("devide two positive integer numbers ", () => {
             expect(divide(6, 2)).to.equal(3)
     });
-    /**  May be cuppons are not the best usage for division :D so we have to find how it should be usable in cupons, may be half price....
+    /**  May be coupons are not the best usage for division :D so we have to find how it should be usable in cupons, may be half price....
     it("devide two positive float numbers ", () => {
             expect(divide(4.5, 1.5)).to.equal(3)
     });
