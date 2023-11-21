@@ -12,4 +12,5 @@ describe('every ', () => {
         expect(([true, 1, null, 'yes'], Boolean)).to.be.false
     });
 
+
 });

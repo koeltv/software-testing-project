@@ -52,10 +52,10 @@ describe('words ', () => {
     
         expect(tmp_values).to.eql(expected_values);
     });
-    it('empty string ', () => {
+    it('empty string - no values entered in to search engine ', () => {
 
         const tmp_values = words('');
-        const expected_values = [''];
+        const expected_values = [];
     
         expect(tmp_values).to.eql(expected_values);
     });
