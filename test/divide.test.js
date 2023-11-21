@@ -4,10 +4,13 @@ import divide from "../src/divide.js";
 const expect = chai.expect
 
 describe('divide ', () => {
-    it("devide two positive integer numbers ", () => {
+    it("devide two positive integer numbers (coupon half price)", () => {
             expect(divide(6, 2)).to.equal(3)
     });
-    /**  May be coupons are not the best usage for division :D so we have to find how it should be usable in cupons, may be half price....
+    it("devide two positive integer numbers( find 1% of price)", () => {
+        expect(divide(6, 100)).to.equal(0.06)
+    });
+    /** 
     it("devide two positive float numbers ", () => {
             expect(divide(4.5, 1.5)).to.equal(3)
     });
