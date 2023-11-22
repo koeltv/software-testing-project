@@ -4,14 +4,37 @@ import get from "../src/get.js";
 const expect = chai.expect
 
 describe('get ', () => {
-    it('return correct value for specific path ( for searching engine and menu navigations) ', () => {
-        const tmp_object = { a: [{ b: { c: 3 } }, 4] };
-        const paths = ['a[0].b.c', 'a[1]'];
-        const expected_values = [3, 4];
-
-        const tmp_values = get(tmp_object, ...paths);
+    it(' return the value at the specified path in an object', () => {
+        const object = { a: { b: { c: 3 } } };
+        const path = 'a.b.c';
+        const expectedResult = 3;
     
-        expect(tmp_values).to.eql(expected_values);
-    });
+        const actualResult = get(object, path);
+    
+        expect(actualResult).to.equal(expectedResult);
+      });
+    
+      it('handle nested objects with array paths', () => {
+        const object = { a: [{ b: { c: 3 } }] };
+        const path = ['a', 0, 'b', 'c'];
+        const expectedResult = 3;
+    
+        const actualResult = get(object, path);
+    
+        expect(actualResult).to.equal(expectedResult);
+      });
+      it('handle null or undefined objects', () => {
+        const nullObject = null;
+        const undefinedObject = undefined;
+        const path = 'a.b.c';
+        const defaultValue = 'default value';
+    
+        const nullResult = get(nullObject, path, defaultValue);
+        const undefinedResult = get(undefinedObject, path, defaultValue);
+    
+        expect(nullResult).to.equal(defaultValue);
+        expect(undefinedResult).to.equal(defaultValue);
+      });
+    
 
 });
