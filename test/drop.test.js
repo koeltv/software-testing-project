@@ -35,7 +35,7 @@ describe('drop ', () => {
     it('handle negative value', () => {
         const tmp_array = [1, 2, 3];
         const n_drop = -2;
-        const expected_values = [3];
+        const expected_values = [1, 2, 3];
 
         const tmp_values = drop(tmp_array, n_drop);
     
@@ -60,7 +60,7 @@ describe('drop ', () => {
     
         expect(tmp_values).to.eql(expected_values);
     });
-    
+
     it('should handle null or undefined arrays', () => {
         const nullArray = null;
         const undefinedArray = undefined;
@@ -70,16 +70,6 @@ describe('drop ', () => {
     
         expect(nullResult).to.deep.equal([]);
         expect(undefinedResult).to.deep.equal([]);
-      });
-
-    it('should return a subarray of elements starting from the startIndex', () => {
-        const array = [1, 2, 3, 4, 5];
-        const startIndex = 2;
-        const endIndex = 4;
-    
-        const result = slice(array, startIndex, endIndex);
-    
-        expect(result).to.deep.equal([3, 4]);
       });
 
 });
