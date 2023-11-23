@@ -14,26 +14,25 @@ describe('filter', () => {
     
         expect(tmp_values).to.eql(expected_values);
     });
-    it('filter pasive ', () => {
-        const tmp_array= [
+    it('filter with always true predicate should return the same array', () => {
+        const array= [
                { 'user': 'barney', 'active': true },
-               { 'user': 'fred',   'active': false } ];
+               { 'user': 'fred',   'active': false },
+        ];
         const predicate = (value, index, tmp_array) => true;
-        const expected_values = [{ 'user': 'fred',   'active': false }];
-
-        const tmp_values = filter(tmp_array, predicate);
     
-        expect(tmp_values).to.eql(expected_values);
+        expect(filter(array, predicate)).to.deep.equal(array);
     });
-
-    it('filter empty', () => {
+    it('filter empty should return empty array', () => {
         const tmp_array = [];
         const predicate = (value, index, tmp_array) => true;
-        const expected_values = [];
-
-        const tmp_values = filter(tmp_array,predicate);
     
-        expect(tmp_values).to.deep.equal(expected_values);
+        expect(filter(tmp_array,predicate)).to.deep.equal([]);
     });
+    it('filter null should return empty array', () => {
+        const tmp_array = null;
+        const predicate = (value, index, tmp_array) => true;
 
+        expect(filter(tmp_array,predicate)).to.deep.equal([]);
+    });
 });

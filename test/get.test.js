@@ -3,8 +3,8 @@ import get from "../src/get.js";
 
 const expect = chai.expect
 
-describe('get ', () => {
-    it(' return the value at the specified path in an object', () => {
+describe('get', () => {
+    it('return the value at the specified path in an object', () => {
         const object = { a: { b: { c: 3 } } };
         const path = 'a.b.c';
         const expectedResult = 3;
@@ -13,7 +13,6 @@ describe('get ', () => {
     
         expect(actualResult).to.equal(expectedResult);
       });
-    
       it('handle nested objects with array paths', () => {
         const object = { a: [{ b: { c: 3 } }] };
         const path = ['a', 0, 'b', 'c'];
@@ -35,6 +34,4 @@ describe('get ', () => {
         expect(nullResult).to.equal(defaultValue);
         expect(undefinedResult).to.equal(defaultValue);
       });
-    
-
 });

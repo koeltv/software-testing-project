@@ -3,8 +3,8 @@ import drop from "../src/drop.js";
 
 const expect = chai.expect
 
-describe('drop ', () => {
-    it('No drop', () => {
+describe('drop', () => {
+    it('no drop', () => {
         const tmp_array = [1, 2, 3];
         const n_drop = 0;
         const expected_values = [1, 2, 3];
@@ -13,8 +13,7 @@ describe('drop ', () => {
     
         expect(tmp_values).to.eql(expected_values);
     });
-
-    it('drop default ', () => {
+    it('drop default', () => {
         const tmp_array = [1, 2, 3];
         
         const expected_values = [2, 3];
@@ -41,7 +40,7 @@ describe('drop ', () => {
     
         expect(tmp_values).to.eql(expected_values);
     });
-    it('drop more that exist ', () => {
+    it('drop more that exist', () => {
         const tmp_array = [1, 2, 3];
         const n_drop = 5;
         const expected_values = [];
@@ -50,8 +49,7 @@ describe('drop ', () => {
     
         expect(tmp_values).to.eql(expected_values);
     });
-
-    it('drop more that exist ', () => {
+    it('drop more that exist', () => {
         const tmp_array = [];
         const n_drop = 2;
         const expected_values = [];
@@ -60,7 +58,6 @@ describe('drop ', () => {
     
         expect(tmp_values).to.eql(expected_values);
     });
-
     it('should handle null or undefined arrays', () => {
         const nullArray = null;
         const undefinedArray = undefined;
@@ -70,6 +67,5 @@ describe('drop ', () => {
     
         expect(nullResult).to.deep.equal([]);
         expect(undefinedResult).to.deep.equal([]);
-      });
-
+    });
 });
