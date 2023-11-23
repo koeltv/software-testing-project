@@ -26,4 +26,5 @@ jobs:
     - name: Run tests
       run: npm run test-with-coverage
     - name: Report coverage
+      if: success() || failure()
       uses: coverallsapp/github-action@v2.2.3
