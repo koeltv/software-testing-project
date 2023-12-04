@@ -5,5 +5,6 @@
     "reporter" : [
         "text",
         "lcov"
-    ]
+    ],
+    "lines": 80
 }

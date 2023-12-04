@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "mocha",
-    "test-with-coverage": "c8 mocha"
+    "test-with-coverage": "c8 --check-coverage mocha"
   },
   "author": "",
   "license": "MIT",
