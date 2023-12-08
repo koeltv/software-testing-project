@@ -32,7 +32,7 @@ describe('slice', () => {
 
         expect(result).to.deep.equal([1, 2, 3, 4, 5]);
     });
-      it('null start ', () => {
+      it('null start', () => {
         const array = [1, 2, 3, 4, 5];
         const start = null;
         const end = 5;
@@ -41,7 +41,7 @@ describe('slice', () => {
 
         expect(result).to.deep.equal([1, 2, 3, 4, 5]);
       });
-      it('undefined end of slicing ', () => {
+      it('undefined end of slicing', () => {
         const array = [1, 2, 3, 4, 5];
         const start = 2;
         const end = undefined;

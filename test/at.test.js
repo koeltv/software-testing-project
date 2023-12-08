@@ -4,7 +4,7 @@ import at from "../src/at.js";
 const expect = chai.expect
 
 describe('at', () => {
-    it('return correct value for specific path ( for searching engine and menu navigations)', () => {
+    it('return correct value for specific path', () => {
         const tmp_object = { a: [{ b: { c: 3 } }, 4] };
         const paths = ['a[0].b.c', 'a[1]'];
         const expected_values = [3, 4];

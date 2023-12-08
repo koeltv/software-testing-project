@@ -7,7 +7,7 @@ describe('every', () => {
     it("every true on null", () => {
         expect(every(null, true)).to.be.true
     });
-    it("every true empty array (if element is not in stock)", () => {
+    it("every true empty array", () => {
             expect(every([], true)).to.be.true
     });
     it("array with elements that don't satisfy the predicate should return false", () => {

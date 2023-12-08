@@ -4,7 +4,7 @@ import filter from "../src/filter.js";
 const expect = chai.expect
 
 describe('filter', () => {
-    it('filter active ', () => {
+    it('filter active', () => {
         const tmp_array = [
                { 'user': 'barney', 'active': true },
                { 'user': 'fred',   'active': false } ];

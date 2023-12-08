@@ -28,19 +28,19 @@ describe('words', () => {
     
         expect(tmp_values).to.be.an('array')
     });
-    it('return words (when filter for searching engine)', () => {
+    it('return words', () => {
         const tmp_values = words('fred, barney, & pebbles');
         const expected_values = ['fred', 'barney', 'pebbles'];
     
         expect(tmp_values).to.deep.equal(expected_values);
     });
-    it('return words and also characters specified by RegEx (when filter for searching engine)', () => {
+    it('return words and also characters specified by RegEx', () => {
         const tmp_values = words('fred, barney, & pebbles', /[^, ]+/g);
         const expected_values = ['fred', 'barney', '&', 'pebbles'];
     
         expect(tmp_values).to.deep.equal(expected_values);
     });
-    it('empty string - no values entered in to search engine', () => {
+    it('empty string', () => {
         const tmp_values = words('');
         const expected_values = [];
     
